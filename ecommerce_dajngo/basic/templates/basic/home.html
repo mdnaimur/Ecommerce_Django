@@ -1,0 +1,156 @@
+{% extends "basic/base.html" %} 
+
+{% load static %}
+{% block title %}
+Home Page
+{% endblock title %}
+
+{% comment %} banner show {% endcomment %}
+
+{% block banner %}
+
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100"  style="height: 500px;" src="{% static 'images/banner/b2.jpg' %}" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100"  style="height: 500px;" src="{% static 'images/banner/b3.jpg' %}" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100"   style="height: 500px;" src="{% static 'images/banner/b4.jpg' %}" alt="Third slide">
+      </div>
+    </div>
+  </div>
+
+{% endblock banner %}
+
+{% block information %}
+
+<div class="container">
+    <div class="row bg-success text-center p-5 text-white border-bottom shadow">
+        <h1>Products</h1>
+        <small class="fs-5">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi adipisci cumque quisquam corrupti distinctio! Facilis aliquid aliquam, quia voluptatem, consequuntur quis aspernatur error qui, minus molestiae dolore laudantium quasi amet.
+        </small>
+    </div>
+</div>
+{% endblock information %}
+{% comment %} Container  {% endcomment %}
+{% block content %}
+<div class="container">
+    <h2 class="text-center">Dairy Products</h2>
+    <br><br><hr>
+    <div class="row container mb-5 pb-2">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUP" data-wow-duration="1s" data-wow-delay="0.6s" style="animatin-duration:1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnessec buttermilk smbg">
+                <a href="">
+                    <div class="goodnessceccont text-center">
+                        <img class="product-img" src="{% static 'images/products/milk-shake-chocolate.png' %}" alt="Milk">
+                        <p class="mlkpro">Milk</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUP" data-wow-duration="1s" data-wow-delay="0.6s" style="animatin-duration:1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnessec buttermilk smbg">
+                <a href="">
+                    <div class="goodnessceccont text-center">
+                        <img class="product-img" src="{% static 'images/products/cow-ghee.png' %}" alt="Milk">
+                        <p class="mlkpro">Milk</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUP" data-wow-duration="1s" data-wow-delay="0.6s" style="animatin-duration:1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnessec buttermilk smbg">
+                <a href="">
+                    <div class="goodnessceccont text-center">
+                        <img class="product-img" src="{% static 'images/products/kulfi.png' %}" alt="Kulfi">
+                        <p class="mlkpro">Kulfi</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row container mb-5 pb-2">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUP" data-wow-duration="1s" data-wow-delay="0.6s" style="animatin-duration:1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnessec buttermilk smbg">
+                <a href="">
+                    <div class="goodnessceccont text-center">
+                        <img class="product-img" src="{% static 'images/products/milk-shake-chocolate.png' %}" alt="Milk">
+                        <p class="mlkpro">Milk</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUP" data-wow-duration="1s" data-wow-delay="0.6s" style="animatin-duration:1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnessec buttermilk smbg">
+                <a href="">
+                    <div class="goodnessceccont text-center">
+                        <img class="product-img" src="{% static 'images/products/cow-ghee.png' %}" alt="Milk">
+                        <p class="mlkpro">Milk</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUP" data-wow-duration="1s" data-wow-delay="0.6s" style="animatin-duration:1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnessec buttermilk smbg">
+                <a href="">
+                    <div class="goodnessceccont text-center">
+                        <img class="product-img" src="{% static 'images/products/kulfi.png' %}" alt="Kulfi">
+                        <p class="mlkpro">Kulfi</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <div class="row container mb-5 pb-2">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUP" data-wow-duration="1s" data-wow-delay="0.6s" style="animatin-duration:1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnessec buttermilk smbg">
+                <a href="">
+                    <div class="goodnessceccont text-center">
+                        <img class="product-img img-responsive center-block" src="{% static 'images/products/milk-shake-chocolate.png' %}" alt="Milk">
+                        <p class="mlkpro">Milk</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUP" data-wow-duration="1s" data-wow-delay="0.6s" style="animatin-duration:1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnessec buttermilk smbg">
+                <a href="">
+                    <div class="goodnessceccont text-center">
+                        <img class="product-img" src="{% static 'images/products/milk-shake-vanilla.png' %}" alt="Milk">
+                        <p class="mlkpro">Milk Shake</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUP" data-wow-duration="1s" data-wow-delay="0.6s" style="animatin-duration:1s; animation-delay:0.6s; animation-name:none;">
+            <div class="goodnessec buttermilk smbg">
+                <a href="">
+                    <div class="goodnessceccont text-center">
+                        <img class="product-img" src="{% static 'images/products/mozzarellacheese.png' %}" alt="Mozzarelancheese">
+                        <p class="Mozzare cheese">Kulfi</p>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
