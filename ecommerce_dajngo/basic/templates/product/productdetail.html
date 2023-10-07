@@ -1,0 +1,43 @@
+{% extends "basic/base.html" %} 
+
+{% load static %}
+{% block title %}
+Product Details 
+{% endblock title %}
+
+{% block content %}
+<div class="container">
+    <div class="row felx justify-content-between">
+        <div class="img2 col-lg-5 mt-5">
+            <img src="{{product.product_image.url}}" alt="" class="image col-xs-6 col-sm-12 col-lg-12 mt-3 text-sm-center w-100 h-75">
+        </div>
+        <div class="productdetail col-lg-5 mt-5">
+            <h1 style="font-family:Georgia;font-size:50px" >
+                {{product.title}}
+            </h1>
+            <h5>
+                BDT {{product.discounted_price}}/-
+            </h5>
+            <small class="fw-light text-decoration-line-through text-muted">
+             <del>  BDT {{product.selling_price}}</del>
+            </small>
+            <br> <br> <hr>
+            <h4>Product Features</h4>
+            <ul class="fs-5">
+                <li>
+                    {{product.description}}
+                </li>
+                <li> {{product.composition}} </li>
+                <li> {{product.prodapp}} </li>
+            </ul>
+            <div class="buttons row flex">
+                <button class="d-grid gap-2 btn1 btn btn-danger p-1 m-1 btn-lg text-decoration-none text-white" type="submit">Add to Cart</button>
+                <div class="btn btn-dark p-1 m-1 btn-lg">
+                    <a href="" class="text-decoration-none text-white">Buy Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
