@@ -1,5 +1,5 @@
 # Dairy Products Ecommerce Website
-*Djagno python based framework*
+*Django python based framework*
 
 
 ## Description
