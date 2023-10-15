@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <title>Dairy Products | {% block title %} {% endblock title %}  </title>
 </head>
 <body>
@@ -61,7 +61,7 @@
               <a href="#" class="nav-link text-white">Whishlist 4</a>
             </li>
             <li class="nav-item mx-2">
-              <a href="#" class="nav-link text-white">Cart 7</a>
+              <a href="{% url 'cart' %}" class="nav-link text-white"> <span class="badge bg-danger"> {% if totalitem > 0 %} {{totalitem}} {% endif %} </span>  Cart </a>
             </li>
            
             {% else %}
@@ -82,7 +82,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="">
+                  <a class="dropdown-item" href="{% url 'orders' %}">
                     Orders
                   </a>
                 </li>
@@ -111,6 +111,9 @@
 
       {% block content %}
     {% endblock content %}
+
+    {% block payment-gateway %}
+    {% endblock payment-gateway %}
 
     <footer class="container-fluid fixed-bottom  bg-success text-center p-2 mt-5 text-white ">
       Copyright: 2023|| Develop By: MNR
