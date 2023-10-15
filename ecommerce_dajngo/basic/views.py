@@ -12,19 +12,32 @@ from django.conf import settings
 
 
 def home(request):
-    return render(request, 'basic/home.html')
+    totoalitem = 0
+    if request.user.is_authenticated:
+        totalitem = len(Cart.objects.filter(user=request.user))
+    return render(request, 'basic/home.html', locals())
 
 
 def about(request):
-    return render(request, 'basic/about.html')
+    totoalitem = 0
+    if request.user.is_authenticated:
+        totalitem = len(Cart.objects.filter(user=request.user))
+    return render(request, 'basic/about.html', locals())
 
 
 def contact(request):
-    return render(request, 'basic/contact.html')
+    totoalitem = 0
+    if request.user.is_authenticated:
+        totalitem = len(Cart.objects.filter(user=request.user))
+    return render(request, 'basic/contact.html', locals())
 
 
 class CategoryView(View):
     def get(self, request, val):
+        totoalitem = 0
+        if request.user.is_authenticated:
+            totalitem = len(Cart.objects.filter(user=request.user))
+
         products = Product.objects.filter(category=val)
         title = Product.objects.filter(category=val).values(
             'title')
@@ -36,6 +49,9 @@ class CategoryTitle(View):
         products = Product.objects.filter(title=val)
         title = Product.objects.filter(category=products[0].category).values(
             'title')
+        totoalitem = 0
+        if request.user.is_authenticated:
+            totalitem = len(Cart.objects.filter(user=request.user))
         return render(request, "basic/category.html", locals())
 
 
@@ -174,7 +190,7 @@ class Checkout(View):
         payment_response = client.order.create(data=data)
       #  test = {'id': 'order_MoMjDCTdxkF9T6', 'entity': 'order', 'amount': 8500, 'amount_paid': 0, 'amount_due': 8500, 'currency': 'BDT', 'receipt': 'order_rcptid_12', 'offer_id': None, 'status': 'created', 'attempts': 0, 'notes': [], 'created_at': 1697347353}
 
-        print(payment_response)
+        # print(payment_response)
         order_id = payment_response['id']
         order_status = payment_response['status']
         if order_status == 'created':
@@ -204,7 +220,7 @@ def payment_done(request):
 
 
 def orders(request):
-    order_palced = OrderPlaced.objects.filter(user=request.user)
+    order_placed = OrderPlaced.objects.filter(user=request.user)
     return render(request, 'product/orders.html', locals())
 
 

@@ -61,7 +61,7 @@
               <a href="#" class="nav-link text-white">Whishlist 4</a>
             </li>
             <li class="nav-item mx-2">
-              <a href="{% url 'cart' %}" class="nav-link text-white">Cart 7</a>
+              <a href="{% url 'cart' %}" class="nav-link text-white"> <span class="badge bg-danger"> {% if totalitem > 0 %} {{totalitem}} {% endif %} </span>  Cart </a>
             </li>
            
             {% else %}
@@ -82,7 +82,7 @@
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="">
+                  <a class="dropdown-item" href="{% url 'orders' %}">
                     Orders
                   </a>
                 </li>
