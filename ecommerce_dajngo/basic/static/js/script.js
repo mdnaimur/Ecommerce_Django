@@ -74,4 +74,30 @@ $('.remove-cart ').click(function () {
 })
 
 
-console.log("I am working js code")
+$('plus-wishlist').click(function () {
+    var id = $(this).attr("pid").toString();
+    $.ajax({
+        type: "GET",
+        url: "/pluswishlist",
+        data: {
+            prod_id: id
+        },
+        success: function (data) {
+            window.location.href = 'http://127.0.0.1:8000/product-detail/${id}'
+        }
+    })
+})
+
+$('minus-wishlist').click(function () {
+    var id = $(this).attr("pid").toString();
+    $.ajax({
+        type: "GET",
+        url: "/minuswishlist",
+        data: {
+            prod_id: id
+        },
+        success: function (data) {
+            window.location.href = 'http://127.0.0.1:8000/product-detail/${id}'
+        }
+    })
+})

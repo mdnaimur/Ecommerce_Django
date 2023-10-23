@@ -50,15 +50,15 @@
                 <a class="nav-link text-white" href="{% url 'contact' %}">Contact Us</a>
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="d-flex" role="search" action="/search">
+              <input class="form-control me-2" type="search" placeholder="Search"  name="search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             {% if request.user.is_authenticated %}
             <li class="nav-item mx-2">
-              <a href="#" class="nav-link text-white">Whishlist 4</a>
+              <a href="#" class="nav-link text-white">Whishlist {{wishitem}} </a>
             </li>
             <li class="nav-item mx-2">
               <a href="{% url 'cart' %}" class="nav-link text-white"> <span class="badge bg-danger"> {% if totalitem > 0 %} {{totalitem}} {% endif %} </span>  Cart </a>

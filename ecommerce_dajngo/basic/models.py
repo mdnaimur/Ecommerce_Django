@@ -1,6 +1,5 @@
-from django.db import models
 from django.contrib.auth.models import User
-
+from django.db import models
 
 # Create your models here.
 CATEGORY_CHOICES = (
@@ -132,3 +131,8 @@ class OrderPlaced(models.Model):
     @property
     def total_cost(self):
         return self.quantity * self.product.discounted_price
+
+
+class Wishlist(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
