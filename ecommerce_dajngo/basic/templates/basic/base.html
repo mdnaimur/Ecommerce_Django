@@ -74,7 +74,7 @@
             {% endif %}
             {% if request.user.is_authenticated %}
             <li class="nav-item dropdown mx-2 " >
-              <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">Md Naimur Rahman</a>
+              <a class="nav-link dropdown-toggle text-white" role="button" data-bs-toggle="dropdown" aria-expanded="false" href="#">{{name}} </a>
               <ul class="dropdown-menu">
                 <li>
                   <a href="{% url 'profile' %}" class="dropdown-item" >
