@@ -13,17 +13,27 @@ The **Dairy Product eCommerce Website** is an online platform dedicated to the s
 
 - **Diverse Dairy Selection:** Browse and shop for a diverse range of dairy products, including milk, cheese, yogurt, butter, cream, and more, from various brands and producers.
 
+<img src="image/productview.png" style="width:400px; height:300px" alt="image" />
+
 - **Product Details:** Each product listing includes detailed information such as price, quantity, nutritional information, and product reviews.
 
 ### User Accounts
 
 - **User Registration:** Users can create an account to save their preferences, track their order history, and receive personalized recommendations.
+<img src="image/regipage.png" style="width:400px; height:300px" alt="image" />
 
 - **Login and Authentication:** Secure login and authentication mechanisms to protect user data.
+<img src="image/loginpage.png" style="width:400px; height:300px" alt="image" />
+
+<img src="image/passwordreset.png" style="width:400px; height:300px" alt="image" />
+
+<img src="image/changepass.png" style="width:400px; height:300px" alt="image" />
+
 
 ### Shopping Cart
 
 - **Add to Cart:** Users can easily add products to their shopping cart and view the cart's contents at any time.
+<img src="image/shippingview.png" style="width:400px; height:300px" alt="image" />
 
 - **Edit Cart:** Edit the quantity or remove items from the cart, and see an estimated total.
 
@@ -43,6 +53,8 @@ The **Dairy Product eCommerce Website** is an online platform dedicated to the s
 
 - **Delivery Options:** Users can choose delivery options, including standard or express, and select their preferred delivery time.
 
+<img src="image/address.png" style="width:400px; height:300px" alt="image" />
+
 - **Order Tracking:** Real-time tracking of orders from processing to delivery, keeping customers informed.
 
 ### Customer Support
@@ -54,6 +66,7 @@ The **Dairy Product eCommerce Website** is an online platform dedicated to the s
 ### Account Management
 
 - **Profile Management:** Users can update their profile information, change passwords, and manage communication preferences.
+<img src="image/profileupdate.png" style="width:400px; height:300px" alt="image" />
 
 ### Responsive Design
 
@@ -70,6 +83,9 @@ The **Dairy Product eCommerce Website** is an online platform dedicated to the s
 ### Secure Transactions
 
 - **Secure Payment Processing:** Utilize secure and trusted payment gateways to protect customer payment information.
+
+<img src="image/paynow.png" style="width:400px; height:300px" alt="image" />
+<img src="image/pay2.png" style="width:400px; height:300px" alt="image" />
 
 ### Admin Dashboard
 

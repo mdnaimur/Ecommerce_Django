@@ -1,9 +1,16 @@
-from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
 from django.contrib.auth import views as auth_view
-from . forms import LoginForm, MyPasswordResetForm, MyPasswordChangeForm, MySetPasswordForm
+from django.urls import path
+
 from . import views
+from .forms import (
+    LoginForm,
+    MyPasswordChangeForm,
+    MyPasswordResetForm,
+    MySetPasswordForm,
+)
 
 urlpatterns = [
     path('', views.home, name='home'),
@@ -30,6 +37,9 @@ urlpatterns = [
     path("pluscart/", views.plus_cart),
     path("minuscart/", views.minus_cart),
     path("removecart/", views.remove_cart),
+    path("pluswishlist/", views.plus_wishlist),
+    path("minuswishlist/", views.minus_wishlist),
+    path("search/", views.search, name='search'),
     # login and authenticaion
     path('registration/', views.CustomerRegistrationView.as_view(),
          name='customaerregistraion'),
@@ -58,3 +68,8 @@ urlpatterns = [
 
 
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+admin.site.site_header = "MNR Dairy Farm Dashboard"
+admin.site.site_title = "MNR Dairy Dashboard"
+admin.site.index_title = "Wecome to MNR Dairy Farm "
